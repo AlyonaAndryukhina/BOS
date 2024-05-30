@@ -10,22 +10,26 @@
 
 typedef int (*format_func)(FILE *stream, const char *msg, int level);
 
-int text_format(FILE *stream, const char *msg, int level) {
+int text_format(FILE *stream, const char *msg, int level) 
+{
     fprintf(stream, "%s: %s\n", level_strings[level], msg);
     return 0;
 }
 
-int json_format(FILE *stream, const char *msg, int level) {
+int json_format(FILE *stream, const char *msg, int level) 
+{
     fprintf(stream, "{\"level\": \"%s\", \"message\": \"%s\"}\n", level_strings[level], msg);
     return 0;
 }
 
-int csv_format(FILE *stream, const char *msg, int level) {
+int csv_format(FILE *stream, const char *msg, int level) 
+{
     fprintf(stream, "%s,%s\n", level_strings[level], msg);
     return 0;
 }
 
-typedef struct {
+typedef struct 
+{
     const char *name;
     format_func func;
 } format_driver;
