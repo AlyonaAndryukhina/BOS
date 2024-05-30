@@ -1,4 +1,4 @@
-/* language: c */
+
 
 #include <stdio.h>
 
