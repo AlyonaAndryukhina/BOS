@@ -5,7 +5,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include "mysyslog.h"
+#include "libmysyslog.h"
 
 // Обработчик сигнала для обработки сигналов SIGHUP и SIGTERM
 void signal_handler(int sig) {
